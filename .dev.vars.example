@@ -1,0 +1,5 @@
+# Explicit synthetic demo. An absent/other value disables demo sign-in.
+LOOPSWAP_MODE=demo
+# Optional server-only bearer secret for an external reconciliation scheduler.
+# Leave unset in local product exploration. Never put it in NEXT_PUBLIC_*.
+LOOPSWAP_JOB_SECRET=

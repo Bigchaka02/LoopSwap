@@ -1,0 +1,26 @@
+{
+  "recordedDate": "2026-09-30",
+  "node": "24.19.0",
+  "pnpm": "11.25.0",
+  "runtime": "Cloudflare Workers, compatibility date 2026-05-15, nodejs_compat",
+  "framework": {
+    "vinext": "1.0.0-beta.5",
+    "react": "19.2.6",
+    "nextCompatibility": "16.3.4",
+    "vite": "8.0.13"
+  },
+  "tooling": {
+    "typescript": "5.9.3",
+    "vitest": "5.0.1",
+    "wrangler": "4.92.0",
+    "@playwright/test": "1.63.0",
+    "drizzle-kit": "0.31.10",
+    "eslint": "9.39.4"
+  },
+  "database": "native D1 SQLite; node:sqlite in transaction tests",
+  "testClock": 1790780000,
+  "lockfile": "pnpm-lock.yaml",
+  "dependencyVersions": "Exact resolved transitive versions are in pnpm-lock.yaml",
+  "cpu": "not exposed by sandbox",
+  "reportedMemoryGiB": 9.7
+}

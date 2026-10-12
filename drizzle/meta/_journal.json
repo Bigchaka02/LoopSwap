@@ -1,0 +1,62 @@
+{
+  "version": "7",
+  "dialect": "sqlite",
+  "entries": [
+    {
+      "idx": 0,
+      "version": "6",
+      "when": 1790785346535,
+      "tag": "0000_yielding_umar",
+      "breakpoints": true
+    },
+    {
+      "idx": 1,
+      "version": "6",
+      "when": 1790785347087,
+      "tag": "0001_integrity",
+      "breakpoints": true
+    },
+    {
+      "idx": 2,
+      "version": "6",
+      "when": 1790785465070,
+      "tag": "0002_hardening",
+      "breakpoints": true
+    },
+    {
+      "idx": 3,
+      "version": "6",
+      "when": 1790786026981,
+      "tag": "0003_ledger_safety",
+      "breakpoints": true
+    },
+    {
+      "idx": 4,
+      "version": "6",
+      "when": 1790786877776,
+      "tag": "0004_byte_capacity",
+      "breakpoints": true
+    },
+    {
+      "idx": 5,
+      "version": "6",
+      "when": 1790787000000,
+      "tag": "0005_republication",
+      "breakpoints": true
+    },
+    {
+      "idx": 6,
+      "version": "6",
+      "when": 1791607148906,
+      "tag": "0006_fancy_karma",
+      "breakpoints": true
+    },
+    {
+      "idx": 7,
+      "version": "6",
+      "when": 1791654189984,
+      "tag": "0007_private_item_photos",
+      "breakpoints": true
+    }
+  ]
+}
