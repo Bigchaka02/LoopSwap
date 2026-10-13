@@ -14,7 +14,8 @@ Source destination: [Bigchaka02/LoopSwap](https://github.com/Bigchaka02/LoopSwap
 
 ## Priority 1 — Validate the actual user journeys
 
-- [ ] Choose and configure automated GitHub verification and source-to-hosting deployment, with approved credentials and protected release checks. The public source import alone does not create deployment automation.
+- [x] Configure automated GitHub verification on pushes and pull requests, using pinned actions, a fresh frozen install, and isolated database checks. First hosted-run results are tracked in [Project progress](PROJECT_PROGRESS.md).
+- [ ] Configure source-to-hosting deployment with approved credentials and release checks. Verification CI does not deploy the site.
 
 These remain unchecked until exercised in an explicitly permitted browser environment.
 

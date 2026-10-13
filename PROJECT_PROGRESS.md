@@ -75,3 +75,9 @@ Fresh source-handoff verification on **2026-10-12** passed `pnpm lint`, `pnpm ty
 - Production load, deployed Worker CPU limits, and long-running history growth need measurement; recorded container timings are not a service guarantee.
 
 Runbooks and boundaries are in [Operations](docs/OPERATIONS.md) and [Security and privacy](docs/SECURITY_PRIVACY.md). Prioritized next work and owner decisions are in [TODO notes](TODO_NOTES.md).
+
+## 2026-10-13 — Automated repository verification
+
+Added `.github/workflows/verify.yml` for pushes to `main`, pull requests, and manual runs. It pins checkout/Node/pnpm actions to their release commit SHAs, uses the recorded toolchain, performs a fresh frozen dependency install with the project workspace/build policy intact, runs `pnpm verify`, applies all migrations to isolated local D1, and checks database integrity. Repository permissions are read-only and checkout credentials are not retained. This workflow does not deploy, read production storage, or run browser previews. The first GitHub-run outcome is pending until reported here.
+
+Local README setup now retains `pnpm-workspace.yaml` during installation so its native dependency build policy is applied.

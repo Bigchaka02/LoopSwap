@@ -77,7 +77,7 @@ Clone the repository and install its locked dependencies:
 ```sh
 git clone https://github.com/Bigchaka02/LoopSwap.git
 cd LoopSwap
-pnpm install --frozen-lockfile --ignore-workspace
+pnpm install --frozen-lockfile
 cp .dev.vars.example .dev.vars
 pnpm build
 pnpm db:migrate
@@ -107,7 +107,7 @@ pnpm build
 pnpm test:worker
 ```
 
-`pnpm verify` runs that sequence. Tests use isolated databases and synthetic sessions. The latest recorded application release passed **113 unit/SQLite tests** and **25 compiled Worker/D1/R2 check groups**. Current handoff checks are recorded in [Project progress](PROJECT_PROGRESS.md).
+`pnpm verify` runs that sequence. [GitHub Actions](https://github.com/Bigchaka02/LoopSwap/actions/workflows/verify.yml) runs it on pushes to `main` and pull requests, after a fresh locked install, then applies and checks all local database migrations. The workflow uses read-only repository permissions and does not deploy or access production storage. Tests use isolated databases and synthetic sessions. The latest recorded application release passed **113 unit/SQLite tests** and **25 compiled Worker/D1/R2 check groups**. Current handoff checks are recorded in [Project progress](PROJECT_PROGRESS.md).
 
 Browser navigation, responsive visuals, keyboard/screen-reader behavior, and complete independent-browser receipt journeys require a permitted browser environment. Browser scripts are supplied but those checks remain unverified here. See [Testing](docs/TESTING.md).
 
