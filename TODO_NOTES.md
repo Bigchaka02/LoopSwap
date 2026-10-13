@@ -9,12 +9,13 @@ Source destination: [Bigchaka02/LoopSwap](https://github.com/Bigchaka02/LoopSwap
 - [x] Complete the source-only review before publication: exclude runtime secrets, local databases, caches/build output, and private records; keep synthetic fixtures and reproducible source/toolchain files.
 - [x] Recheck the source snapshot: 113 unit/SQLite tests, 25 compiled Worker/D1/R2 groups, strict types, lint, and build pass; eight migrations apply to isolated local D1. See [Testing](docs/TESTING.md).
 - [x] Preserve the repository owner's initial commit and import the complete source snapshot without earlier development Git history. The import commit identifies this handoff; website access remains owner-private.
-- [ ] Verify fresh installation, local build/migration/check/seed instructions, and source-to-hosting configuration boundaries from a clean checkout.
+- [x] Verify a fresh frozen install, full checks/build, eight local migrations, and database integrity on a clean Linux GitHub runner. [Successful run](https://github.com/Bigchaka02/LoopSwap/actions/runs/38454434067).
+- [ ] Exercise the README local browser/start/seed walkthrough from a fresh clone and validate alternate source-to-hosting configuration boundaries.
 - [x] Preserve third-party notices, including the [shadcn stylesheet license](vendor/shadcn-tailwind-4.13.0.LICENSE.md) and [Sites Vite plugin license](build/sites-vite-plugin.LICENSE). A project redistribution license has not been assigned; that remains an open owner decision.
 
 ## Priority 1 — Validate the actual user journeys
 
-- [x] Configure automated GitHub verification on pushes and pull requests, using pinned actions, a fresh frozen install, and isolated database checks. First hosted-run results are tracked in [Project progress](PROJECT_PROGRESS.md).
+- [x] Configure automated GitHub verification on pushes and pull requests, using pinned actions, a fresh frozen install, and isolated database checks. The first clean run passed; evidence is in [Project progress](PROJECT_PROGRESS.md).
 - [ ] Configure source-to-hosting deployment with approved credentials and release checks. Verification CI does not deploy the site.
 
 These remain unchecked until exercised in an explicitly permitted browser environment.

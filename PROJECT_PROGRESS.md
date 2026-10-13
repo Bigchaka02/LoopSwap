@@ -78,6 +78,10 @@ Runbooks and boundaries are in [Operations](docs/OPERATIONS.md) and [Security an
 
 ## 2026-10-13 — Automated repository verification
 
-Added `.github/workflows/verify.yml` for pushes to `main`, pull requests, and manual runs. It pins checkout/Node/pnpm actions to their release commit SHAs, uses the recorded toolchain, performs a fresh frozen dependency install with the project workspace/build policy intact, runs `pnpm verify`, applies all migrations to isolated local D1, and checks database integrity. Repository permissions are read-only and checkout credentials are not retained. This workflow does not deploy, read production storage, or run browser previews. The first GitHub-run outcome is pending until reported here.
+Added `.github/workflows/verify.yml` for pushes to `main`, pull requests, and manual runs. It pins checkout/Node/pnpm actions to their release commit SHAs, uses the recorded toolchain, performs a fresh frozen dependency install with the project workspace/build policy intact, runs `pnpm verify`, applies all migrations to isolated local D1, and checks database integrity. Repository permissions are read-only and checkout credentials are not retained. This workflow does not deploy, read production storage, or run browser previews. The first clean [GitHub run](https://github.com/Bigchaka02/LoopSwap/actions/runs/38454434067) succeeded: dependency install, lint/types, 113 unit/SQLite tests, production build, 25 compiled runtime groups, all eight local migrations, database integrity, and unchanged dependency inputs. This closes the fresh-install/build/migration checks for the Linux runner. Browser/start/seed walkthroughs and deployment automation remain separate.
 
 Local README setup now retains `pnpm-workspace.yaml` during installation so its native dependency build policy is applied.
+
+## Current development checkpoint
+
+Repository verification and clean-run setup checks are complete. The local execution workspace disconnected during follow-up work; no calendar-export implementation or live-site update was made in this checkpoint. The roadmap retains calendar exports for a later tested and deployed change. GitHub is the authoritative source for the two verification/documentation commits.
